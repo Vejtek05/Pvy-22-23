@@ -1,0 +1,334 @@
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	background-color: blueviolet;
+	color: white;
+	font-size: 36px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&family=Roboto:ital@1&display=swap');
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	color: #000000;
+
+}
+
+h1 {
+	left: 20%;
+	position: absolute;
+	color: black;
+	font-family: 'Noto Serif Ahom', serif;
+}
+
+
+h3 {
+
+	color: black;
+	font-family: 'Noto Serif Ahom', serif;
+}
+
+nav {
+	background-color: violet;
+	font-size: 100%;
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigace {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	margin: auto;
+	max-width: 1000px;
+	display: flex 3;
+}
+
+li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+li>a:hover {
+	color: rgb(247, 0, 132);
+	text-decoration: underline;
+}
+
+li a {
+	color: white;
+}
+
+header {
+	background-color: aqua;
+	position: relative;
+	height: 201px;
+}
+
+.gun {
+	position: absolute;
+	font-size: 50px;
+	bottom: 100px;
+}
+
+.zbran {
+	right: 0;
+	position: absolute;
+	transform: scaleX(-1);
+	font-size: 50px;
+	bottom: 100px;
+}
+
+.kukla {
+	right: 50%;
+	position: absolute;
+	font-size: 50px;
+	bottom: 100px;
+	animation: zvetseni-a-zmena-barvy 2s infinite;
+}
+
+.container {
+	width: 800px;
+	margin: auto;
+}
+
+section {
+	display: flex;
+}
+
+img {
+	max-width: 100%;
+}
+
+div {
+	padding: 10px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.containera {
+	max-width: 1000px;
+	margin: auto;
+	display: flex 3;
+}
+
+.skryte {
+	display: none;
+}
+
+@media only screen and (min-width:600px) {
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.menu-polozky {
+		display: block;
+		margin: 0;
+		padding: 6px;
+	}
+
+	.menu-polozky li {
+		display: inline-block;
+		padding-left: 12px;
+	}
+}
+
+.menu {
+	background-color: white;
+	padding: 6px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.menu-polozky {
+	list-style-type: none;
+}
+
+#k1 {
+	background-image: url(lupiči\ x.jpg);
+}
+
+#k2 {
+	background-image: url(auto\ x.jpg);
+}
+
+.galerie {
+	display: flex;
+	gap: 30px;
+}
+
+.obrazek {
+	flex: 1 0 300px;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+}
+
+@media only screen and (max-width: 780px) {
+	section {
+		flex-direction: column;
+	}
+}
+
+form {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+}
+
+form>input,
+form>button {
+	padding: 6px;
+	border: 4px solid purple;
+	font-size: 25px;
+}
+
+form>input[type=text] {
+	flex: 0 1 100%;
+	color: purple;
+	border-radius: 12px 0 0 12px;
+}
+
+form>input[type=text]:focus {
+	background-color: lavender;
+	outline: none;
+}
+
+form>button {
+	flex: 0 0 250px;
+	background-color: purple;
+	color: white;
+	border-radius: 0 12px 12px 0;
+	cursor: pointer;
+}
+
+
+.Check {
+	left: 37%;
+	position: absolute;
+	
+}
+
+.galeriex {
+	display: grid;
+	gap: 6px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 250px);
+  }
+  
+  .obrazekx {
+	background-size: cover;
+	background-position: center;
+  }
+  
+  #d1 {
+	background-image: url(peníze.jpg);
+  }
+  
+  #d2 {
+	background-image: url(zlato.jpg);
+	background-position-y: 30%;
+  }
+  
+  #d3 {
+	background-image: url(mince.jpg);
+	background-position: left;
+  }
+  
+  #d4 {
+	background-image: url(šperky.jpg);
+  }
+  
+  #d5 {
+	background-image: url(diamanty.jpg);
+  }
+  
+
+  
+  @media only screen and (max-width: 780px) {
+	.galeriex {
+	  grid-template-columns: repeat(2, 1fr);
+	  grid-template-rows: repeat(4, 250px);
+	  grid-auto-flow: dense;
+	}
+  
+	#d1, #d3 {
+	  grid-column: 1 / 3;
+	}
+  }
+
+  #Lup{
+	display: block;
+  }
+
+  .popup-overlay {
+	background-color: rgba(52, 52, 52, 0.52);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+  }
+  
+  .popup-window {
+	width: 600px;
+	height: 150px;
+	padding: 1rem;
+	position: absolute;
+	left: calc((100vw - 600px)/2);
+	top: calc((100vh - 600px)/2);
+	background: rgb(2,0,36);
+	background: linear-gradient(180deg, rgb(8, 129, 189) 0%, rgb(0, 2, 2) 100%); 
+	border-radius: 12px;
+	box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.72);
+  }
+
+  :root {
+	
+	--color-primary: rgb(49, 49, 193);
+	--color-primary-hover: rgb(38, 38, 170);
+	--color-primary-20: rgba(49, 49, 193, 0.2);
+	--color-secondary: rgb(226, 147, 0);
+	--color-secondary-hover: rgb(199, 129, 0);
+	--color-secondary-20: rgb(226, 147, 0, 0.2);
+	--font-header: 'Raleway', sans-serif;
+	--font-text: 'Roboto', sans-serif;
+	--font-basic-size: 1.2rem;
+	--form-border-radius: 4px;
+	--form-input-border: 1px solid var(--color-primary);
+  }
+
+  h2 {
+	font-size: 320%;
+	border-bottom: 2px solid var(--color-secondary);
+  }
+
+  .alert {
+	background-color: var(--color-secondary-20);
+	padding: 1rem;
+	border-left: 6px solid var(--color-secondary);
+	font-size: 50px;
+}
+
+@keyframes zvetseni-a-zmena-barvy {
+    0% { font-size: 24px; color: red; }
+    50% { font-size: 36px; color: blue; }
+    100% { font-size: 24px; color: red; }
+  }
